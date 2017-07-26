@@ -1,0 +1,36 @@
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt-get install nvidia-375
+reboot
+cd Downloads/
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda
+sudo apt-get install cuda
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+cd /usr/local/cuda-8.0/samples/5_Simulations/nbody
+sudo make
+./nbody
+
+cd Downloads/
+tar -xzvf cudnn-8.0-linux-x64-v5.1.tgz
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+sudo apt-get install libcupti-dev
+sudo python get-pip.py
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install python-pip
+sudo apt-get install python-pip python-dev
+sudo apt-get install python3-pip python3-dev
+pip3 install tensorflow-gpu
+pip install --upgrade pip
+python3
+
+# Python
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
