@@ -42,9 +42,7 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 
 # install tensorflow
 sudo apt-get install libcupti-dev  
-sudo python get-pip.py  
 sudo apt-get update && sudo apt-get -y upgrade  
-sudo apt-get install python-pip  
 sudo apt-get install python-pip python-dev  
 sudo apt-get install python3-pip python3-dev  
 pip3 install tensorflow-gpu  
@@ -73,5 +71,5 @@ cd /home/username/cntk/Scripts/install/linux
   
 # check CNTK  
 source "/home/username/cntk/activate-cntk"  
-cd cntk/Tutorials/  
-NumpyInterop/FeedForwardNet.py  
+cd cntk/Tutorials/  
+python NumpyInterop/FeedForwardNet.py   
