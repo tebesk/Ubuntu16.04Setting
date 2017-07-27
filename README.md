@@ -40,7 +40,7 @@ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64  
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*  
 
-# install tensorflow
+# Install tensorflow
 sudo apt-get install libcupti-dev  
 sudo apt-get update && sudo apt-get -y upgrade  
 sudo apt-get install python-pip python-dev  
@@ -56,7 +56,7 @@ hello = tf.constant('Hello, TensorFlow!')
 sess = tf.Session()  
 print(sess.run(hello))  
   
-# install CNTK  
+# Install CNTK  
 **result of many and many install(lol), binary script installation is the best way.  
 https://docs.microsoft.com/en-us/cognitive-toolkit/setup-linux-binary-script**  
   
@@ -69,7 +69,7 @@ Below we assume that you have unpacked the CNTK Binary package to /home/username
 cd /home/username/cntk/Scripts/install/linux  
 ./install-cntk.sh  
   
-# check CNTK  
+# Check CNTK  
 source "/home/username/cntk/activate-cntk"  
-cd cntk/Tutorials/  
-python NumpyInterop/FeedForwardNet.py   
+cd cntk/Tutorials/  
+python NumpyInterop/FeedForwardNet.py  
